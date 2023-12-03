@@ -1,0 +1,41 @@
+.root {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.chosen_gradient_button_wrapper {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.chosen_gradient_button {
+	width: 35px;
+	height: 35px;
+	background: var(--gradient);
+	border-radius: 50%;
+	box-shadow: 4px 4px 20px 4px rgba(34, 60, 80, 0.2);
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.chosen_gradient_button__active {
+	width: 40px;
+	height: 40px;
+	box-shadow: 4px 4px 20px 4px rgba(34, 60, 80, 0.4);
+}
+.title {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	flex-wrap: wrap;
+	flex: 1;
+}

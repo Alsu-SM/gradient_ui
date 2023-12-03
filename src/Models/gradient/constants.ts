@@ -1,0 +1,147 @@
+import { Gradient, GradientModel, GradientStop, GradientType } from './types';
+
+export const DEFAULT_GRADIENT_COLOR_VALUE: string = '#000000FF';
+export const DEFAULT_GRADIENT_END_POINT: string = '#ffcac9';
+export const DEFAULT_GRADIENT_ANGLE: number = 120;
+export const DEFAULT_ACTIVE_COLOR_ID: number = 1;
+export const DEFAULT_GRADIENT_TYPE: GradientType = GradientType.Linear;
+export const DEFAULT_GRADIENT_COLOR: GradientStop = {
+	id: 1,
+	color: DEFAULT_GRADIENT_COLOR_VALUE,
+	stopPoint: 0,
+};
+export const DEFAULT_GRADIENT_COLORS: GradientStop[] = [
+	DEFAULT_GRADIENT_COLOR,
+	{
+		id: 2,
+		color: '#737dfe',
+		stopPoint: 60,
+	},
+	{
+		id: 3,
+		color: '#bcdbff',
+		stopPoint: 80,
+	},
+];
+export const DEFAULT_GRADIENT: Gradient = {
+	id: 0,
+	colors: DEFAULT_GRADIENT_COLORS,
+	angle: DEFAULT_GRADIENT_ANGLE,
+	activeColorId: DEFAULT_ACTIVE_COLOR_ID,
+	activeColor: DEFAULT_GRADIENT_COLOR,
+	type: DEFAULT_GRADIENT_TYPE,
+};
+export const CHOSEN_GRADIENTS: Gradient[] = [
+	{
+		id: 1,
+		colors: DEFAULT_GRADIENT_COLORS,
+		angle: DEFAULT_GRADIENT_ANGLE,
+		activeColorId: DEFAULT_ACTIVE_COLOR_ID,
+		activeColor: DEFAULT_GRADIENT_COLOR,
+		type: GradientType.Ellipse,
+	},
+	{
+		id: 2,
+		colors: [
+			{ id: 1, color: '#171536FF', stopPoint: 0 },
+			{ id: 2, color: '#075CCEFF', stopPoint: 60 },
+			{ id: 3, color: '#BEB3E3FF', stopPoint: 90 },
+		],
+		angle: 45,
+		activeColorId: 1,
+		activeColor: { id: 1, color: '#171536FF', stopPoint: 0 },
+		type: GradientType.Linear,
+	},
+	{
+		id: 3,
+		colors: [
+			{ id: 2, color: '#c6bcffff', stopPoint: 60 },
+			{ id: 1, color: '#0062b1ff', stopPoint: 74 },
+			{ id: 3, color: '#000000ff', stopPoint: 80 },
+		],
+		angle: -134.27477570094075,
+		activeColorId: 1,
+		activeColor: { id: 1, color: '#0062b1ff', stopPoint: 74 },
+		type: GradientType.Linear,
+	},
+	{
+		id: 5,
+		colors: [
+			{ id: 1, color: '#16a5a5ff', stopPoint: 0 },
+			{ id: 5, color: '#bdedff38', stopPoint: 31 },
+			{ id: 2, color: '#7b64ff68', stopPoint: 53 },
+			{ id: 4, color: '#0c797dff', stopPoint: 62 },
+			{ id: 3, color: '#fdc3ffff', stopPoint: 73 },
+		],
+		angle: -210.05542448644812,
+		activeColorId: 5,
+		activeColor: { id: 5, color: '#bdedff38', stopPoint: 31 },
+		type: GradientType.Circle,
+	},
+];
+export const DEFAULT_GRADIENT_MODEL: GradientModel = {
+	gradient: DEFAULT_GRADIENT,
+	favoriteGradients: CHOSEN_GRADIENTS,
+};
+export const colorSwatch = [
+	'#A5A5A5',
+	'#D4D4D4',
+	'#FFFFFF',
+	'#FCCFCB',
+	'#FED59C',
+	'#FEF4AF',
+	'#F6F7BD',
+	'#DBF29B',
+	'#D0EFEE',
+	'#DAF5FF',
+	'#DFDAFF',
+	'#FEDEFF',
+	'#747474',
+	'#C2C2C2',
+	'#F7F7F7',
+	'#F7887C',
+	'#FEB44F',
+	'#FDEB70',
+	'#EFF18A',
+	'#C0E84D',
+	'#AAE2E1',
+	'#BDEDFF',
+	'#C6BCFF',
+	'#FDC3FF',
+	'#4D4D4D',
+	'#999999',
+	'#EEEEEE',
+	'#F44E3B',
+	'#FE9200',
+	'#FCDC00',
+	'#DBDF00',
+	'#A4DD00',
+	'#68CCCA',
+	'#73D8FF',
+	'#AEA1FF',
+	'#FDA1FF',
+	'#333333',
+	'#808080',
+	'#D9D9D9',
+	'#D33115',
+	'#E27300',
+	'#FCC400',
+	'#B0BC00',
+	'#68BC00',
+	'#16A5A5',
+	'#5CBEE8',
+	'#7B64FF',
+	'#FA28FF',
+	'#000000',
+	'#666666',
+	'#B3B3B3',
+	'#9F0500',
+	'#C45100',
+	'#FB9E00',
+	'#808900',
+	'#194D33',
+	'#0C797D',
+	'#0062B1',
+	'#653294',
+	'#AB149E',
+];

@@ -1,0 +1,63 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    height: fit-content;
+}
+.angles_lists_wrapper {
+    display: flex;
+    gap: 5px;
+}
+.angle_button_wrapper {
+    height: 35px;
+    width: 35px;
+}
+.angle_button {
+    height: 35px;
+    width: 35px;
+    background: transparent;
+    border:none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+.angle_button:hover, .angle_button__active {
+    border: 1px solid #fff;
+    outline: none;
+}
+.angle_button__radial .angle_button_icon {
+    width: 18px;
+    height: auto;
+}
+
+.angle_button_icon {
+    width: 12px;
+    height: auto;
+    transform: rotate(var(--angle));
+}
+
+.angle_input {
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    width: 100px;
+    font-size: 17px;
+    font-weight: 500;
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+}

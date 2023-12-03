@@ -1,0 +1,89 @@
+.root {
+
+    --glass-panel-border-radius: 20px;
+    --glass-panel-backdrop-filter: blur(2px);
+    --glass-panel-padding: 0px;
+    --glass-panel-border-opacity: 0.20;
+    --glass-panel-background-opacity: 0.15;
+
+    --glass-panel-background-light:  rgba( 255, 255, 255, var(--glass-panel-background-opacity));
+    --glass-panel-border-light: 1px solid rgba( 255, 255, 255, var(--glass-panel-border-opacity));
+    --glass-panel-box-shadow-light: none;
+
+    --glass-panel-background-dark: rgba(0,0,0,var( --glass-panel-background-opacity));
+    --glass-panel-border-dark: 1px solid transparent;
+    --glass-panel-box-shadow-dark: none;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--glass-panel-background);
+    border: var(--glass-panel-border);
+    box-shadow: var(--glass-panel-box-shadow);
+
+    
+    padding: var(--glass-panel-padding);
+    border-radius: var(--glass-panel-border-radius);
+    backdrop-filter: var(--glass-panel-backdrop-filter);
+    -webkit-backdrop-filter: var(--glass-panel-backdrop-filter);
+}
+.children {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    font-size: 14px;
+    width: 100%;
+    flex: 1;
+}
+.light {
+    --glass-panel-background: var(--glass-panel-background-light);
+    --glass-panel-border: var(--glass-panel-border-light);
+    --glass-panel-box-shadow: var(--glass-panel-box-shadow-light);
+
+    background: var(--glass-panel-background);
+    border: var(--glass-panel-border);
+    box-shadow: var(--glass-panel-box-shadow);
+}
+
+.dark {
+    --glass-panel-background: var(--glass-panel-background-dark);
+    --glass-panel-border: var(--glass-panel-border-dark);
+    --glass-panel-box-shadow: var(--glass-panel-box-shadow-dark);
+
+    background: var(--glass-panel-background);
+    border: var(--glass-panel-border);
+    box-shadow: var(--glass-panel-box-shadow);
+}
+.title_row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.expand_button {
+    width: 20px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.angle_icon {
+    width: 8px;
+    height: auto;
+    transform: rotate(90deg);
+}
+.angle_icon__closed {
+    transform: rotate(0deg);
+}
+.title {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.root.closed {
+    height: 40px;
+    min-height: 40px;
+    overflow: hidden;
+}

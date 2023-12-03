@@ -1,0 +1,59 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background: #1f1f1f;
+	padding: 10px;
+	border-radius: 8px;
+}
+.code_row_wrapper {
+	display: flex;
+	gap: 1ch;
+}
+div.code_row_wrapper {
+	flex-wrap: wrap;
+}
+.code_row {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	position: relative;
+
+	&:hover {
+		.copy_icon {
+			opacity: 1;
+		}
+	}
+}
+
+.attribute {
+	color: #7cdcfe;
+}
+.property {
+	color: #dcdcaa;
+}
+.coma {
+	color: #cccccc;
+}
+.bracket {
+	color: #c35587;
+}
+.number_value {
+	color: #b5cea8;
+}
+.string_value {
+	color: #ce7d44;
+}
+
+.copy_icon {
+	width: 20px;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	path {
+		fill: #cccccc;
+   } 
+}

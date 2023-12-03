@@ -1,0 +1,180 @@
+
+.gradient_colors_list_item {
+    border-radius: 10px;
+}
+
+.gradient_colors_list_item_button, input, .close_button, .add_color_button, button{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    border-radius: 0;
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.gradient_colors_list_item_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gradient_colors_list_item_button__active {
+    background: rgba(255,255,255,0.5)
+}
+
+.gradient_colors_list_item_color_label {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background: var(--color);
+}
+.gradient_colors_list_item_color_label_wrapper {
+    min-width: 45px;
+    max-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.input_wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    max-width: 150px;
+    box-sizing: border-box;
+}
+
+.close_button {
+    max-width: 45px;
+    min-width: 45px;
+    box-sizing: border-box;
+    margin: 0;
+    height: 20px;    
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &:hover {
+        .close_button_icon {
+            width: 18px;
+            height: auto;
+        }
+    }
+}
+
+.close_button_icon {
+    width: 15px;
+    height: auto;
+    transition: all 0.1s ease-in-out;
+    overflow: visible;
+}
+
+.add_color_button_wrapper {
+    margin: 0;
+    position: absolute;
+    --glass-panel-background-opacity: 0.5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button.add_color_button {
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:hover {
+        background: rgba(255,255,255,0.5)
+    }
+}
+.add_color_button_icon {
+    width: 16px;
+    height: auto;  
+}
+
+.gradient_colors_list {
+    width: 100%;
+}
+.gradient_colors_list, .gradient_colors_list_body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.gradient_colors_list_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.gradient_colors_list_header_cell {
+    padding: 0 8px;
+    &:nth-child(1),
+    &:nth-child(4) {
+        width: 50px;
+        box-sizing: border-box;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+        flex: 1;
+    }
+}
+
+
+.gradient_colors_list {
+    .add_color_button_wrapper {
+        --glass-panel-background-opacity: 0.5;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        flex: 0;
+        padding: 0;
+        margin-left: 4px;
+        box-sizing: border-box;
+    }
+    
+    button.add_color_button {
+        box-sizing: border-box;
+        min-width: 100%;
+        min-height: 100%;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &:hover {
+            background: rgba(255,255,255,0.5)
+        }
+    }
+    .add_color_button_icon {
+        width: 12px;
+        height: auto;  
+    }
+    .close_panel_button_icon {
+        transform: rotate(45deg);
+    
+    }
+}

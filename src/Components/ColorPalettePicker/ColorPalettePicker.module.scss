@@ -1,0 +1,59 @@
+.color_picker_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.color_picker {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+    padding-top: 15px;
+    .swatch {
+     flex: 1;
+     height: 400px;
+     width: 100% !important;
+     box-sizing: border-box;
+
+     :global(.w-color-swatch) {
+         display: grid !important;
+         grid-template-columns: repeat(12, 1fr);
+         flex-direction: column;
+         padding: 5px;
+         width: 100% !important;
+        
+     }
+     :global(.w-color-swatch) + div {
+         display: none !important;
+     }
+     border-radius: 10px 10px 0 0 !important;
+     &>div>div {
+         width: 21px !important;
+         height: 21px !important;
+         box-shadow: 1px 1px 0px 1px rgba(34, 60, 80, 0.1);
+ 
+         div {
+             width: 6px !important;
+             height: 6px !important;
+         }
+     }
+    }
+   
+    .col {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     justify-content: space-between;
+     align-self: stretch;
+    }
+    .swatch {
+     height: fit-content;
+    }
+   
+}
+ .compact_wrapper {
+    --glass-panel-padding: 0 0 15px 0;
+}

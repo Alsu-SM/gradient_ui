@@ -1,0 +1,105 @@
+.color_point_label, .angleLabel {
+    position: absolute;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.color_point_label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    --glass-panel-padding: 8px 15px;
+    top: calc(50% - var(--top) * 60%);
+    left: calc(50% + var(--left) * 70%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    .color_dot {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: var(--color);
+    }
+    &.color_point_label__active {
+        border: 3px solid var(--color);
+    }
+}
+
+.color_point_button {
+    font-family: var(--font-family);
+    border: none;
+    background: transparent;
+    outline: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.gradient_background {
+    height: 100%;
+    width: 100%;
+    padding: 150px 150px 150px 200px;
+    box-sizing: border-box;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+
+.gradient_circle {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: var(--gradient);
+    -webkit-box-shadow: 2px 4px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 2px 4px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 20px 4px rgba(34, 60, 80, 0.2);
+
+}
+
+
+.angleLabel {
+    padding: 20px;
+    box-sizing:border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient);
+    border-radius: 50%;
+    -webkit-box-shadow: 2px 4px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 2px 4px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 20px 4px rgba(34, 60, 80, 0.2);
+    top: calc(50% - var(--top) * 50%);
+    left: calc(50% + var(--left) * 50%);
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
+        border-radius: 50%;
+        z-index: 3;
+        background: transparent;
+        border: 2px solid #fff;
+    }
+}

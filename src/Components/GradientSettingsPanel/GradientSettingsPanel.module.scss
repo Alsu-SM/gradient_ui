@@ -1,0 +1,148 @@
+
+.settings {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 50%;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 50vw;
+    font-size: 18px;
+    --glass-panel-background-opacity: 0.2;
+    --glass-panel-padding: 30px;
+    --glass-panel-border-radius: 30px 0 0 30px;
+    
+    box-sizing: border-box;
+    transform: translate(0, -50%);
+    transition: transform 0.3s;
+    .close_panel_button_wrapper {
+        top: 50%;
+        left: -25px;
+        transition: left 0.3s 0.2s, top 0.3s 0.2s;
+    }
+    &.hidden {
+        transform: translate(100%, -50%);
+        .close_panel_button_wrapper {
+            left: -90px;
+            .close_panel_button_icon {
+                transform: rotate(0);
+            }
+        }
+    }
+}
+
+.settings_row {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+
+.settings_col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.close_button {
+    max-width: 50px;
+    min-width: 50px;
+    box-sizing: border-box;
+    margin: 0;
+    height: 20px;    
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &:hover {
+        .close_button_icon {
+            width: 18px;
+            height: auto;
+        }
+    }
+}
+.close_button {
+    max-width: 50px;
+    min-width: 50px;
+    box-sizing: border-box;
+    margin: 0;
+    height: 20px;    
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &:hover {
+        .close_button_icon {
+            width: 18px;
+            height: auto;
+        }
+    }
+}
+
+.close_button_icon {
+    width: 15px;
+    height: auto;
+    transition: all 0.1s ease-in-out;
+    overflow: visible;
+}
+
+.add_color_button_wrapper {
+    margin: 0;
+    position: absolute;
+    --glass-panel-background-opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button.add_color_button {
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:hover {
+        background: rgba(255,255,255,0.5)
+    }
+}
+.add_color_button_icon {
+    width: 18px;
+    height: auto;  
+}
+.close_button_icon {
+    width: 15px;
+    height: auto;
+    transition: all 0.1s ease-in-out;
+    overflow: visible;
+}
+
+.close_panel_button_icon {
+    transform: rotate(45deg);
+
+}
