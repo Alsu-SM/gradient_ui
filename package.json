@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.2.0",
 	"type": "module",
-	"homepage": "https://Alsu-SM.github.io/gradient_ui",
+	"homepage": "https://alsu-sm.github.io/gradient_ui",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
