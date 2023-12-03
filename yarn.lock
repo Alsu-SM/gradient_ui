@@ -2664,9 +2664,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gradient-ui@workspace:.":
+"gradient_ui@workspace:.":
   version: 0.0.0-use.local
-  resolution: "gradient-ui@workspace:."
+  resolution: "gradient_ui@workspace:."
   dependencies:
     "@types/react": 18.2.25
     "@types/react-dom": 18.2.6
